@@ -209,6 +209,7 @@ body main .values #calculate-box button {
   font-size: 20px;
   color: white;
   opacity: 0.7;
+  cursor: pointer;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
 }
