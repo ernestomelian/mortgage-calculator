@@ -1,0 +1,259 @@
+@import "font.css";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body .container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 576px) {
+  body .container {
+    width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  body .container {
+    width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body .container {
+    width: 1140px;
+  }
+}
+body .d-flex {
+  display: flex;
+}
+body .align-center {
+  align-items: center;
+}
+body .flex-justify-center {
+  justify-content: center;
+}
+body .flex-justify-between {
+  justify-content: space-between;
+}
+body .mt-35 {
+  margin-top: 35px;
+}
+body .mb-25 {
+  margin-bottom: 25px;
+}
+body header {
+  height: 64px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+body header h1 {
+  font-family: "Publico Headline";
+  font-weight: 400;
+  margin: 0;
+}
+@media screen and (max-width: 575px) {
+  body header {
+    padding: 16px 23px;
+  }
+}
+body main {
+  font-family: "Graphik";
+  font-size: 14px;
+  margin-top: 48px;
+  display: grid;
+  grid-template-areas: "values results";
+  grid-template-columns: 60% 40%;
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 575px) {
+  body main {
+    grid-template-areas: "values" "results";
+    grid-template-columns: 100%;
+  }
+}
+body main .values {
+  grid-area: values;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+  border-radius: 8px;
+  padding: 24px;
+  z-index: 1;
+}
+body main .values .label {
+  margin-bottom: 10px;
+}
+body main .values .information {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 16px;
+  margin-bottom: 36px;
+}
+body main .values .numbers {
+  display: grid;
+  grid-template-columns: 20px auto 50px 88px;
+  align-items: center;
+  text-align: center;
+}
+body main .values .numbers .progress-label {
+  font-size: 20px;
+}
+body main .values .numbers .progress-label.start {
+  justify-self: flex-start;
+}
+body main .values .numbers .selection-bar {
+  padding-top: 7px;
+}
+body main .values .numbers .selection-bar .slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 16px;
+  background: linear-gradient(to right, #1b3979 0%, #1b3979 0%, #ddd 0%, #ddd 100%);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 8px;
+}
+body main .values .numbers .selection-bar .slider:hover {
+  opacity: 1;
+}
+body main .values .numbers .selection-bar .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 36px;
+  height: 36px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+body main .values .numbers .selection-bar .slider::-moz-range-thumb {
+  width: 36px;
+  height: 36px;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+body main .values .numbers .box-selection {
+  border: 1px solid #bbbcbc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 14px 30px;
+}
+body main .values .money-entrance .money-input {
+  border: 1px solid #bbbcbc;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 48px;
+  padding: 14px 24px;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+body main .values .money-entrance .money-input span {
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+}
+body main .values .money-entrance .money-input span input {
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Graphik";
+  font-weight: 500;
+  margin-left: 5px;
+  width: calc(100% - 16px);
+  /* Firefox */
+}
+body main .values .money-entrance .money-input span input::-webkit-outer-spin-button, body main .values .money-entrance .money-input span input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body main .values .money-entrance .money-input span input[type=number] {
+  -moz-appearance: textfield;
+}
+body main .values .money-entrance .money-input.focused {
+  border: 1px solid #316eef;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.09);
+}
+body main .values .money-entrance .mandatory-field {
+  font-size: 12.9px;
+  color: #d83e00;
+  margin-top: 5px;
+}
+body main .values .money-entrance:not(.empty) .mandatory-field {
+  display: none;
+}
+body main .values .money-entrance.empty .money-input {
+  border: 1px solid #d83e00;
+}
+body main .values #annual {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 24px;
+}
+body main .values #calculate-box button {
+  border: none;
+  background: #316eef;
+  border-radius: 8px;
+  height: 56px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  color: white;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+body main .values #calculate-box button:hover {
+  opacity: 1;
+}
+body main .results {
+  grid-area: results;
+  background: #fbfbfb;
+  border-radius: 0px 0px 8px 8px;
+  padding: 56px 32px;
+}
+body main .results .titles:not(:last-child) {
+  margin-bottom: 20px;
+}
+body main .results .title {
+  font-weight: 600;
+  font-size: 25px;
+  color: #2e2f2f;
+  margin-bottom: 25px;
+}
+body main .results .title-2-level {
+  font-size: 20px;
+  color: #5d5d5d;
+}
+body main .results .title-3-level {
+  font-size: 16.1px;
+  color: #5d5d5d;
+  font-family: "Helvetica";
+}
+body main .results .number-result {
+  font-weight: 600;
+  font-size: 25px;
+}
+body main .results hr {
+  border: 0.5px solid #ddd;
+  background-color: #ddd;
+}
+body main .results.empty {
+  color: #bbbcbc;
+}
+@media screen and (max-width: 575px) {
+  body main .results.empty {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Ing. Ernesto Melian" />
+        <title>Mortgage Calculator</title>
+        <link rel="stylesheet" href="assets/css/styles.css" />
+    </head>
+    <body>
+        <header class="d-flex align-center">
+            <div class="container">
+                <h1>Mortgage Calculator</h1>
+            </div>
+        </header>
+        <main class="container align-center">
+            <section class="values">
+                <div class="information">
+                    Change values to calculate your results
+                </div>
+                <div id="years">
+                    <div class="label">Years of mortgage</div>
+                    <div class="numbers">
+                        <div class="start progress-label">1</div>
+                        <div class="selection-bar">
+                            <input
+                                type="range"
+                                min="1"
+                                max="40"
+                                value="1"
+                                class="slider"
+                                id="years-range"
+                            />
+                        </div>
+                        <div class="end progress-label">40</div>
+                        <div class="box-selection" id="years-value"></div>
+                    </div>
+                </div>
+                <div id="rate" class="mt-35">
+                    <div class="label">Rate of interest (%)</div>
+                    <div class="numbers">
+                        <div class="start progress-label">1</div>
+                        <div class="selection-bar">
+                            <input
+                                type="range"
+                                min="0.1"
+                                step="0.01"
+                                max="10"
+                                value="0.1"
+                                class="slider"
+                                id="rate-range"
+                            />
+                        </div>
+                        <div class="end progress-label">10</div>
+                        <div class="box-selection" id="rate-value"></div>
+                    </div>
+                </div>
+                <div id="loan" class="money-entrance mt-35">
+                    <div class="label">Loan Amount</div>
+                    <div class="money-input d-flex align-center">
+                        <span class="d-flex">
+                            $<input
+                                id="loan-input"
+                                data-type="number"
+                                type="text"
+                                min="0.00"
+                                max="10000.00"
+                                step="0.01"
+                                placeholder="0"
+                                onfocusout="onFocusOut(this)"
+                                onblur="onFocusOut(this)"
+                                onfocus="onFocus(this)"
+                        /></span>
+                    </div>
+                    <div class="mandatory-field">Mandatory-field</div>
+                </div>
+                <div id="annual" class="mt-35">
+                    <div id="tax" class="money-entrance">
+                        <div class="label">Annual Tax</div>
+                        <div class="money-input d-flex align-center">
+                            <span class="d-flex">
+                                $<input
+                                    id="tax-input"
+                                    data-type="number"
+                                    type="text"
+                                    min="0.00"
+                                    max="10000.00"
+                                    step="0.01"
+                                    placeholder="0"
+                                    onfocusout="onFocusOut(this)"
+                                    onblur="onFocusOut(this)"
+                                    onfocus="onFocus(this)"
+                            /></span>
+                        </div>
+                        <div class="mandatory-field">Mandatory-field</div>
+                    </div>
+                    <div id="insurance" class="money-entrance">
+                        <div class="label">Annual Insurance</div>
+                        <div class="money-input d-flex align-center">
+                            <span class="d-flex">
+                                $<input
+                                    id="insurance-input"
+                                    data-type="number"
+                                    type="text"
+                                    min="0.00"
+                                    max="10000.00"
+                                    step="0.01"
+                                    placeholder="0"
+                                    onfocusout="onFocusOut(this)"
+                                    onblur="onFocusOut(this)"
+                                    onfocus="onFocus(this)"
+                            /></span>
+                        </div>
+                        <div class="mandatory-field">Mandatory-field</div>
+                    </div>
+                </div>
+                <div id="calculate-box" class="mt-35">
+                    <button onclick="calculate()">Calculate</button>
+                </div>
+            </section>
+            <section class="results empty" id="results-container">
+                <div class="title">Your results</div>
+                <div class="title-3-level titles">Principal & Interest</div>
+                <div class="number-result mb-25" id="result-principal">
+                    $ --
+                </div>
+                <div class="title-3-level titles">Tax</div>
+                <div class="number-result mb-25" id="result-tax">$ --</div>
+                <div class="title-3-level titles">Insurance</div>
+                <div class="number-result mb-25" id="result-insurance">
+                    $ --
+                </div>
+                <hr class="mb-25" />
+                <div class="title-2-level titles">Total Monthly Payment</div>
+                <div class="number-result mb-25" id="result-total">$ --</div>
+            </section>
+        </main>
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>

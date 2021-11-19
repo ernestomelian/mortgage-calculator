@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Graphik";
+    src: url("../fonts/rebrand/Graphik-Medium.woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Graphik";
+    src: url("../fonts/rebrand/Graphik-Regular-Web.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Graphik";
+    src: url("../fonts/rebrand/Graphik-Semibold-Web.woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Publico";
+    src: url("../fonts/rebrand/PublicoBanner-Bold-Web.woff2");
+    font-weight: 600;
+}
+@font-face {
+    font-family: "Publico";
+    src: url("../fonts/rebrand/PublicoBanner-Medium-Web.woff2");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Publico";
+    src: url("../fonts/rebrand/PublicoBanner-Regular-Web.woff2");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Publico Headline";
+    src: url("../fonts/rebrand/PublicoHeadline-Medium-Web.woff2");
+    font-weight: 500;
+}
